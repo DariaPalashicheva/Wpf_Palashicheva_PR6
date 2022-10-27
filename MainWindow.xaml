@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Palashicheva_PR6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -15,8 +15,22 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="140*"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="TextBlock" TextAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Grid.Row="0" Grid.ColumnSpan="2" Fill="DimGray" />
+        <Rectangle  Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" Fill="DodgerBlue" />
+        <TextBlock Grid.Row="0"  Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Auth" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold"/>
+
+        <TextBlock  Grid.Row="2"  Grid.ColumnSpan="2" x:Name="UsernamePodsk" Height="40" Text="Username" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,0,0,0" Background="White" />
+        <TextBox Grid.Row="2"  Grid.ColumnSpan="2"  x:Name="Username" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,0,0,0" Background="{x:Null}"  MouseLeave="Username_MouseLeave" MouseEnter="Username_MouseEnter"/>
+        <TextBlock  Grid.Row="2"  Grid.ColumnSpan="2" x:Name="PasswordPodsk" Height="40" Text="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,100,0,0" Background="White"/>
+        <TextBox Grid.Row="2"  Grid.ColumnSpan="2"  x:Name="Password"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,100,0,0" Background="{x:Null}" MouseLeave="Password_MouseLeave" MouseEnter="Password_MouseEnter" />
+        <WrapPanel Grid.Row="3"  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Remember me" Margin="0,0,10,0" FontSize="20"/>
+            <CheckBox x:Name="Check" Margin="0,0,10,0" Height="20" Width="20"></CheckBox>
+            <Button x:Name="Log" Content="Log in" FontSize="20"/>
+        </WrapPanel>
+
     </Grid>
 </Window>

@@ -24,5 +24,39 @@ namespace Wpf_Palashicheva_PR6
         {
             InitializeComponent();
         }
+
+
+        private void Username_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(UsernamePodsk.Text))
+            {
+                UsernamePodsk.Text = "";
+            }
+        }
+        private void Username_MouseLeave(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(Username.Text))
+            {
+                UsernamePodsk.Text = "Username";
+            }
+        }
+
+        private void Password_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(PasswordPodsk.Text))
+            {
+                PasswordPodsk.Text = "";
+            }
+        }
+
+        private void Password_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(PasswordPodsk.Text))
+            {
+                PasswordPodsk.Text = "Password";
+            }
+        }
+
+
     }
 }
