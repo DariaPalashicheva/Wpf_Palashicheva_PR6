@@ -32,40 +32,60 @@ namespace Wpf_Palashicheva_PR6
         string userp = "User";
 
 
-        private void Username_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (!String.IsNullOrWhiteSpace(UsernamePodsk.Text))
-            {
-                UsernamePodsk.Text = "";
-            }
-        }
-        private void Username_MouseLeave(object sender, RoutedEventArgs e)
-        {
-            if (String.IsNullOrWhiteSpace(Username.Text))
-            {
-                UsernamePodsk.Text = "Username";
-            }
-        }
 
-        private void Password_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (!String.IsNullOrWhiteSpace(PasswordPodsk.Text))
-            {
-                PasswordPodsk.Text = "";
-            }
-        }
 
-        private void Password_MouseLeave(object sender, MouseEventArgs e)
-        {
-            if (String.IsNullOrWhiteSpace(PasswordPodsk.Text))
-            {
-                PasswordPodsk.Text = "Password";
-            }
-        }
 
         private void Log_Click(object sender, RoutedEventArgs e)
         {
+            if (Username.Text == "" && Password.Text == "")
+            {
+                MessageBox.Show("Enter username!\nEnter password!", "Infromation");
 
+            }
+            else if (Username.Text == "")
+            {
+                MessageBox.Show("Enter username!", "Infromation");
+
+            }
+            else if (Password.Text == "")
+            {
+                MessageBox.Show("Enter password!", "Infromation");
+
+            }
+            else if (Username.Text != adminu && Username.Text != useru)
+            {
+                MessageBox.Show("User is not found!", "Infromation");
+
+            }
+            else if (Username.Text == adminu && Password.Text != adminp || Username.Text == useru && Password.Text != userp)
+            {
+                MessageBox.Show("Password incorrect!", "Infromation");
+            }
+            else if (Username.Text == adminu && Password.Text == adminp || Username.Text == useru && Password.Text == userp)
+            {
+                
+            }
+
+        }
+
+        private void Username_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            UsernamePodsk.Text = "";
+
+            if (Username.Text == "" )
+                {
+                UsernamePodsk.Text = "Username";
+                }
+        }
+
+        private void Password_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            PasswordPodsk.Text = "";
+
+            if (Password.Text == "")
+            {
+                PasswordPodsk.Text = "Username";
+            }
         }
     }
 }
