@@ -25,6 +25,12 @@ namespace Wpf_Palashicheva_PR6
             InitializeComponent();
         }
 
+        string adminu = "Admin";
+        string adminp = "Admin";
+
+        string useru = "User";
+        string userp = "User";
+
 
         private void Username_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -57,6 +63,9 @@ namespace Wpf_Palashicheva_PR6
             }
         }
 
+        private void Log_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
