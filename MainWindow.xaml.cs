@@ -61,9 +61,28 @@ namespace Wpf_Palashicheva_PR6
             {
                 MessageBox.Show("Password incorrect!", "Infromation");
             }
-            else if (Username.Text == adminu && Password.Text == adminp || Username.Text == useru && Password.Text == userp)
+            else if (Username.Text == adminu && Password.Text == adminp)
+            {
+                Fr.Navigate(new Uri("Page1.xaml", UriKind.Relative));
+            }
+            
+            else if (Username.Text == useru && Password.Text == userp)
+            {
+                Fr.Navigate(new Uri("Page2.xaml", UriKind.Relative));
+            }
+
+            if (Check.IsChecked == false)
             {
                 
+                Username.Text = "";
+                Password.Text = "";
+                PasswordPodsk.Text = "Password";
+            }
+            else if (Check.IsChecked == true)
+            {
+                Username.Text = Username.Text;
+                Password.Text = "";
+                PasswordPodsk.Text = "Password";
             }
 
         }
@@ -87,5 +106,6 @@ namespace Wpf_Palashicheva_PR6
                 PasswordPodsk.Text = "Username";
             }
         }
+        
     }
 }

@@ -31,6 +31,6 @@
             <CheckBox x:Name="Check" Margin="0,0,10,0" Height="20" Width="20"></CheckBox>
             <Button x:Name="Log" Content="Log in" FontSize="20" Click="Log_Click"/>
         </WrapPanel>
-
+        <Frame x:Name="Fr" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
     </Grid>
 </Window>
