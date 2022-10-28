@@ -24,5 +24,10 @@ namespace Wpf_Palashicheva_PR6
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
     }
 }
