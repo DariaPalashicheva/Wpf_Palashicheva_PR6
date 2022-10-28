@@ -22,9 +22,9 @@
         <Rectangle  Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" Fill="DodgerBlue" />
         <TextBlock Grid.Row="0"  Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Auth" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold"/>
 
-        <TextBlock  Grid.Row="2"  Grid.ColumnSpan="2" x:Name="UsernamePodsk" Height="40" Text="Username" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,0,0,0" Background="White" />
+        <TextBlock Foreground="gray"  Grid.Row="2"  Grid.ColumnSpan="2" x:Name="UsernamePodsk" Height="40" Text="Username" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,0,0,0" Background="White" />
         <TextBox Grid.Row="2"  Grid.ColumnSpan="2"  x:Name="Username" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,0,0,0" Background="{x:Null}"  TextChanged="Username_TextChanged"/>
-        <TextBlock  Grid.Row="2"  Grid.ColumnSpan="2" x:Name="PasswordPodsk" Height="40" Text="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,100,0,0" Background="White"/>
+        <TextBlock Foreground="gray"  Grid.Row="2"  Grid.ColumnSpan="2" x:Name="PasswordPodsk" Height="40" Text="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,100,0,0" Background="White"/>
         <TextBox Grid.Row="2"  Grid.ColumnSpan="2"  x:Name="Password"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="24" Margin="0,100,0,0" Background="{x:Null}" TextChanged="Password_TextChanged" />
         <WrapPanel Grid.Row="3"  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
             <TextBlock Text="Remember me" Margin="0,0,10,0" FontSize="20"/>

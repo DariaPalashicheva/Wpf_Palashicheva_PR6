@@ -76,13 +76,13 @@ namespace Wpf_Palashicheva_PR6
                 
                 Username.Text = "";
                 Password.Text = "";
-                PasswordPodsk.Text = "Password";
+               
             }
             else if (Check.IsChecked == true)
             {
                 Username.Text = Username.Text;
                 Password.Text = "";
-                PasswordPodsk.Text = "Password";
+  
             }
 
         }
@@ -103,7 +103,7 @@ namespace Wpf_Palashicheva_PR6
 
             if (Password.Text == "")
             {
-                PasswordPodsk.Text = "Username";
+                PasswordPodsk.Text = "Password";
             }
         }
         
